@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. Lựa chọn đồng tiền gốc (chẳng hạn là Việt Nam Đồng) bằng cách chọn danh
+sách From Currency
+2. Lựa chọn đồng tiền muốn chuyển đổi sang (chẳng hạn là Đô-la Mỹ) bằng cách
+chọn từ danh sách To Currency
+3. Nhập vào giá trị muốn chuyển đổi ở trường Ammout
+4. Nhấn nút Convert thì kết quả sẽ hiển thị ở bên dưới. -->
+    <h1>Chuyển đổi tiền tệ </h1>
+    <form style="margin-left: 30px;" action="">
+        <label for="ammout">Ammout</label> <br>
+        <input type="text" required placeholder="Hãy nhập số tiền cần chuyển đổi" name="ammout" id="ammout"
+            onkeyup="checkForm()"> <br>
+        <label for="form-currency">From Currency</label> <br>
+        <select name="form-currency" id="form-currency"> <br>
+            <option value="vnd">Vietnam</option>
+            <option value="vnd">Japan</option>
+        </select> <br>
+        <label for="to-currency">To Currency</label> <br>
+        <select name="to-currency" id="to-currency"> <br>
+            <option value="vnd">Japan</option>
+            <option value="vnd">Vietnam </option>
+        </select> <br>
+        <input id="btn" type="submit" value="Convert">
+        <div style="color: red;" id="result"></div>
+    </form>
+    <script>
+        function checkForm() {
+            const ammount = document.getElementById("ammout").value;
+            const btn = document.getElementById("btn");
+            console.log(ammout);
+            btn.addEventListener("click", function () {
+                result.innerHTML = "Result: " + (amount.value) * 170 + "￥";
+            });
+        }
+
+
+    </script>
+</body>￥
+
+</html>
